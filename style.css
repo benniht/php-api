@@ -1,22 +1,71 @@
+/**
+ * @file style.css
+ * @author William Bruno
+ * @date 2013-05-25
+ */
+* { margin: 0; padding: 0; list-style: none; border: none; }
 
-h2{
-    background-color:black;
+body { background: #fff; }
 
-}
-h1{
-    background-color:green;
-}
-body{
-    background-color:red;
-}
-h1 {
-    color: blue;
-    font-family: verdana;
-    font-size: 300%;
-}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-p  {
-color: red;
-font-family: courier;
-font-size: 160%;
+.content { margin: 0 auto; }
+.fleft { float: left; }
+.fright { float: right; }
+.clear { clear: both; }
+
+.overflow { overflow: hidden; }
+
+.hidden-text { overflow: hidden; text-indent: 100%; white-space: nowrap; }
+.is-hidden { display: none; }
+
+#adcast-wrap {
+	width: 728px; height: 400px;
+	padding: 20px; margin-top: 30px;
+	background: #000;
+	margin-bottom: 10px;
+	position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#adcast-wrap .overflow { height: 100%; position: relative; }
+.adcast-item {
+	margin: 0 10px 10px 0;
+	position: absolute;
+	top: 0; left: 0;
+  -webkit-transition: 2s;
+     -moz-transition: 2s;
+      -ms-transition: 2s;
+       -o-transition: 2s;
+	        transition: 2s;
+	opacity: 0;
+	display: block;
+}
+.adcast-item img { display: block; }
+
+#adcast .is-active { opacity: 1; }
+#pager {
+	background: rgba(255, 255, 255, 0.3);
+	padding: 10px;
+	position: absolute; z-index: 10;
+	right: 0; bottom: 0;
+}
+.pager-item {
+	cursor: pointer; border: 2px solid transparent;
+	width: 30px; height: 30px;
+	border-radius: 50%;
+}
+.pager-item:hover,
+.pager-item.is-active { border: 2px solid #FF0207; }
+
+@media only screen and (max-width: 728px) {
+	img { max-width: 100% !important; height: auto !important; }
+	#adcast,
+	#adcast-wrap { width: 100%; height: auto; }
+	.adcast-item { width: 100%; }
+	#adcast-gif { display: block; }
 }
