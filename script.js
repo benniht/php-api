@@ -1,4 +1,3 @@
-
 function animasi(){
     document.getElementById("animasi").innerHTML = "<div class='animasi'></div>";
     
@@ -9,4 +8,4 @@ try {
   catch(err) {
     document.getElementById("demo").innerHTML =
     err.name + "<br>" + err.message;
-  } 
+}
